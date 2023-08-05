@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <button id="changeButton">Click Me for change!</button>
+    <div id="contentDiv">Hello, Developer!</div>
+
+    <script>
+
+
+        const changeButton = document.getElementById("changeButton");
+        const contentDiv = document.getElementById("contentDiv");
+
+        // Define an array of messages or images you want to display
+        const messages = [
+            "Hello, Maria!",
+            "Welcome to Module-2 !",
+            "Now you are doing DOM Manipulation Assignment",
+            "This Assignment is for Ostad MERN Stack Course"
+        ];
+
+        
+        changeButton.addEventListener("click", function () {
+           
+            // Generate a random index to select a message from the array
+            const randomIndex = Math.floor(Math.random() * messages.length);
+
+            // Change the content of the div element to the selected message
+            contentDiv.textContent = messages[randomIndex];
+        });
+
+    </script>
+</body>
+
+</html>

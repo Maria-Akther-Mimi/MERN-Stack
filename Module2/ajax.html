@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX</title>
+</head>
+
+<body>
+    <div class="text-center d-none" id="ajax-show">
+        <span class="spinner-border spinner-border-sm"></span> Show API Data<br><br>
+    <button class="btn btn-dark" id="ajax-btn">Call API</button>
+    </div>
+    <div class="body">
+        <table class="table table-bordered table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>User_Id</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+            </thead>
+            <tbody id="ajax-tbody"></tbody>
+        </table>
+
+    </div>
+    </div>
+
+    <script>
+        let ajaxTbody = document.getElementById("ajax-tbody")
+        let ajaxBtn = document.getElementById("ajax-btn")
+        let show = document.getElementById("ajax-show")
+
+        const getData = async () => {
+            let res = await fetch("https://jsonplaceholder.typicode.com/posts")
+            let json = await res.json()
+            return json
+        }
+    
+
+        const showInTable = async () => {
+            ajaxTbody.innerHTML = ""
+            show.classList.remove('d-none')
+            let data = await getData()
+            if (Object.keys(data).length === 0 && data.constructor === Object) {
+                alert("API call failed ");
+                show.classList.add('d-none');
+            } else {
+                show.classList.add('d-none');
+                data.map(item => {
+                    ajaxTbody.innerHTML += `
+      <tr>
+        <td>${item.userId}</td>
+        <td>${item.id}</td>
+        <td>${item.title}</td>
+        <td>${item.body}</td>
+      </tr>
+    `;
+                });
+            }
+
+        }
+
+        ajaxBtn.addEventListener('click', showInTable)
+    </script>
+</body>
+
+</html>

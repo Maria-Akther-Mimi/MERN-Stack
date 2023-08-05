@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Switch</title>
+</head>
+
+<body>
+    <h1>Image Switch</h1>
+    <img id="imageElement" src="E:\\MERN Stack (Tools)\\M2\\Module2\\module2_1.jpg" alt="Image 1">
+    <br>
+    <button id="button">Switch</button>
+
+
+    <script>
+
+        // Get references to the image and button elements
+        var imageElement = document.getElementById("imageElement");
+        var button = document.getElementById("button");
+
+        // Add click event listeners to the buttons
+        button.addEventListener("click", function () {
+            imageElement.src = "E:\\MERN Stack (Tools)\\M2\\Module2\\module2_1.jpg";
+        });
+
+        button.addEventListener("click", function () {
+            imageElement.src = "E:\\MERN Stack (Tools)\\M2\\Module2\\module2_2.jpg";
+        });
+    </script>
+</body>
+
+</html>
