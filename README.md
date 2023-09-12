@@ -7,5 +7,8 @@
 ### 4. Module-4 Assignment link =>  Holiday Module
 ### 5. Module-5 Assignment link => <a href="https://github.com/Maria-Akther-Mimi/MERN-Stack/tree/main/Module5"> Click here </a>
 ### 6. Module-6 Assignment link => <a href="https://github.com/Maria-Akther-Mimi/MERN-Stack/tree/main/Module6"> Click here </a>
+### 7. Module-7 Assignment link => <a href="https://github.com/Maria-Akther-Mimi/MERN-Stack/tree/main/Module7"> Click here </a>
+### 8. Module-8 Assignment link =>  Holiday Module
+
 
 
