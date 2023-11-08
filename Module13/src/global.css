@@ -1,0 +1,18 @@
+.productImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid red;
+    object-fit: cover;
+}
+
+
+.maria {
+    text-align: center;
+    display: none;
+    margin: 0 auto;
+}
+
+.maria-active {
+    display: block;
+}
